@@ -1,8 +1,6 @@
-from functions import Consulta,CrearObjeto,insertar
-#x=str(input("Ingresa el primer apellido: "))
-#z=str(input("Ingresa el segundo apellido: "))
+from functions import prueva,ConsultaT,insert_registros
+from conexion import agregar_registros as registro
 
-#datos=Consulta(x,z)#recibimos los datos de la consulta
-#Estudiante=CrearObjeto(datos)#creamos un objeto con los datos del estudiante
-insertar("x")
-
+datos=ConsultaT()#recibimos los datos de la consulta
+prueva(datos)
+insert_registros(datos)
