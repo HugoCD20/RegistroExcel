@@ -36,7 +36,7 @@ def insert_registros(datos):
             if i[3]!="VACIO":
                 apellido=str(i[0]+" "+i[1])
                 nombres=str(i[2]+" "+i[3])
-                registro(apellido,nombres,i[5],i[6],i[7],i[8],i[9])
+                registro(apellido,nombres,i[5],i[6],i[7],i[8],i[10])
             else:
                 apellido=str(i[0]+" "+i[1])
-                registro(apellido,i[2],i[5],i[6],i[7],i[8],i[9])
+                registro(apellido,i[2],i[5],i[6],i[7],i[8],i[10])
