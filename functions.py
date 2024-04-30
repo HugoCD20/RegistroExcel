@@ -1,5 +1,4 @@
 import openpyxl
-from model import Estudiante
 from conexion import agregar_usuario as inserta
 from conexion import agregar_registros as registro
 book=openpyxl.load_workbook('sample.xlsx')
@@ -22,21 +21,9 @@ def ConsultaT():
 def prueva(datos):
     for i in datos:
         if i[0]!="VACIO":
-            if i[3]!="VACIO":
-                apellido=str(i[0]+" "+i[1])
-                nombres=str(i[2]+" "+i[3])
-                inserta(apellido,nombres,i[4])
-            else:
-                apellido=str(i[0]+" "+i[1])
-                inserta(apellido,i[2],i[4])
+                inserta(i[0],i[1],i[2],i[3],i[4])
 
 def insert_registros(datos):
     for i in datos:
         if i[0]!="VACIO":
-            if i[3]!="VACIO":
-                apellido=str(i[0]+" "+i[1])
-                nombres=str(i[2]+" "+i[3])
-                registro(apellido,nombres,i[5],i[6],i[7],i[8],i[10])
-            else:
-                apellido=str(i[0]+" "+i[1])
-                registro(apellido,i[2],i[5],i[6],i[7],i[8],i[10])
+            registro(i[0],i[1],i[2],i[3],i[5],i[6],i[7],i[8],i[10])
