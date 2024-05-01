@@ -9,6 +9,7 @@ def ConsultaT():
     info=[]
     total=[]
     for i in range(2,filas+1):
+            info.append(i)
             for celda in sheet[i]:
                 if celda.value==None:
                     info.append('VACIO')
@@ -17,6 +18,23 @@ def ConsultaT():
             total.append(info)
             info=[]
     return total
+
+def CambiarValores(arreglo,seleccion,indice):
+    seleccion=int(seleccion)
+    apellido1=arreglo[seleccion][1]
+    apellido2=arreglo[seleccion][2]
+    nombre1=arreglo[seleccion][3]
+    nombre2=arreglo[seleccion][4]
+
+    for i in arreglo:
+         sheet["A"+str(i[0])]=apellido1
+         sheet["B"+str(i[0])]=apellido2
+         sheet["C"+str(i[0])]=nombre1
+         sheet["D"+str(i[0])]=nombre2
+         book.save('sample.xlsx')
+         indice.append(i[0])
+
+    return indice
 
 def prueva(datos):
     for i in datos:
