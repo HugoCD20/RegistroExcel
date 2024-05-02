@@ -38,10 +38,10 @@ def CambiarValores(arreglo,seleccion,indice):
 
 def prueva(datos):
     for i in datos:
-        if i[0]!="VACIO":
-                inserta(i[0],i[1],i[2],i[3],i[4])
+        if i[1]!="VACIO":
+                inserta(i[1],i[2],i[3],i[4],i[5])
 
 def insert_registros(datos):
     for i in datos:
-        if i[0]!="VACIO":
-            registro(i[0],i[1],i[2],i[3],i[5],i[6],i[7],i[8],i[10])
+        if i[1]!="VACIO":
+            registro(i[1],i[2],i[3],i[4],i[6],i[7],i[8],i[9],i[11])

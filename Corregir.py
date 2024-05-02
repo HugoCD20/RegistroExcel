@@ -1,5 +1,5 @@
 from functions import ConsultaT,CambiarValores
-def prueva(datos):
+def Correccion(datos):
     correctos=[]
     for i in datos:
         if i[1]!="VACIO":
@@ -23,7 +23,6 @@ def Seleccionar(coincidencias,indice):
             seleccion=input("-> ")
             CambiarValores(coincidencias,seleccion,indice)
             contador=False
-    return indice
             
 
 
@@ -49,11 +48,12 @@ def buscar(correctos):
                             coincidencias.append(correctos[y])
                     
         if coincidencias:
-            coincidencias.append(correctos[x])
-            indice=Seleccionar(coincidencias,indice)
+            coincidencias.append(correctos[x])        
+            Seleccionar(coincidencias,indice)
             coincidencias=[]
 
 
-datos=ConsultaT()
-correctos=prueva(datos)
-buscar(correctos)
+def ejecucion():
+    datos=ConsultaT()
+    correctos=Correccion(datos)
+    buscar(correctos)
