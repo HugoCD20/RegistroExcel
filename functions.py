@@ -34,7 +34,6 @@ def CambiarValores(arreglo,seleccion,indice):
          book.save('sample.xlsx')
          indice.append(i[0])
 
-    return indice
 
 def prueva(datos):
     for i in datos:

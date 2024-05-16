@@ -31,10 +31,13 @@ def buscar(correctos):
     indice=[]
     i=len(correctos)
     for x in range(i):
+        cont=0
         if len(indice)==0:
             for y in range(i):
                 if correctos[x][0] != correctos[y][0]:
                     if correctos[x][1].upper()==correctos[y][1].upper() or correctos[x][2].upper()==correctos[y][2].upper() or correctos[x][3].upper()==correctos[y][3].upper() or correctos[x][4].upper()==correctos[y][4].upper():
+                        if correctos[x][1].upper()==correctos[y][1].upper() and correctos[x][2].upper()==correctos[y][2].upper() and correctos[x][3].upper()==correctos[y][3].upper() and correctos[x][4].upper()==correctos[y][4].upper():
+                            cont+=1
                         coincidencias.append(correctos[y])
         else:
             validacion=True
@@ -45,11 +48,15 @@ def buscar(correctos):
                  for y in range(i):
                     if correctos[x][0] != correctos[y][0]:
                         if correctos[x][1].upper()==correctos[y][1].upper() or correctos[x][2].upper()==correctos[y][2].upper() or correctos[x][3].upper()==correctos[y][3].upper() or correctos[x][4].upper()==correctos[y][4].upper():
+                            if correctos[x][1].upper()==correctos[y][1].upper() and correctos[x][2].upper()==correctos[y][2].upper() and correctos[x][3].upper()==correctos[y][3].upper() and correctos[x][4].upper()==correctos[y][4].upper():
+                                cont+=1
                             coincidencias.append(correctos[y])
                     
-        if coincidencias:
+        if coincidencias and cont!=len(coincidencias):
             coincidencias.append(correctos[x])        
             Seleccionar(coincidencias,indice)
+            coincidencias=[]
+        else:
             coincidencias=[]
 
 

@@ -34,7 +34,7 @@ def agregar_registros(apellidop,apellidom,nombre1,nombres,taller,documento,durac
                     documento,duracion,
                     Hrs_extras,inf_recuperada
                 )
-            sql3=f"SELECT * FROM Registro where Taller='{taller}' and Documento='{documento}' and Duracion='{duracion}' and Hrs_extras='{Hrs_extras}' and inf_recuperada='{inf_recuperada}'"
+            sql3=f"SELECT * FROM Registro where id_estudiante='{id}' and Taller='{taller}' and Documento='{documento}' and Duracion='{duracion}' and Hrs_extras='{Hrs_extras}' and inf_recuperada='{inf_recuperada}'"
             cursor.execute(sql3)
             resultado2=cursor.fetchall()
             if not resultado2:
