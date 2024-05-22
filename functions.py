@@ -19,7 +19,7 @@ def ConsultaT():
             info=[]
     return total
 
-def CambiarValores(arreglo,seleccion,indice):
+def CambiarValores(arreglo,seleccion):
     seleccion=int(seleccion)
     apellido1=arreglo[seleccion][1]
     apellido2=arreglo[seleccion][2]
@@ -32,7 +32,6 @@ def CambiarValores(arreglo,seleccion,indice):
          sheet["C"+str(i[0])]=nombre1
          sheet["D"+str(i[0])]=nombre2
          book.save('sample.xlsx')
-         indice.append(i[0])
 
 
 def prueva(datos):
